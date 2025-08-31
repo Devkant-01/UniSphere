@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniSphere - Student Developers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0d1117] text-white font-sans">
+  <!-- Top Navbar -->
+  <div class="flex items-center justify-between px-6 py-4 bg-[#111827]">
+    <div class="flex items-center space-x-2">
+      <div class="h-6 w-6 rounded-full bg-blue-500"></div>
+      <span class="text-lg font-semibold">UniSphere</span>
+    </div>
+    <div class="flex items-center bg-[#1f2937] px-3 py-2 rounded-lg w-1/3">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"/>
+      </svg>
+      <input type="text" placeholder="Search" class="bg-transparent outline-none text-sm ml-2 w-full">
+    </div>
+    <div class="flex items-center space-x-4">
+      <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405M19 13V7a2 2 0 00-2-2H7a2 2 0 00-2 2v6m12 4v2a2 2 0 01-2 2H7a2 2 0 01-2-2v-2h12z"/>
+      </svg>
+      <div class="w-8 h-8 rounded-full bg-gray-500"></div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="grid grid-cols-3 gap-6 p-6">
+    <!-- Left + Center Section -->
+    <div class="col-span-2 space-y-6">
+      <!-- Group Header -->
+      <div class="bg-[#111827] p-6 rounded-xl">
+        <h1 class="text-2xl font-semibold">Student Developers</h1>
+        <p class="text-gray-400 text-sm mt-1">2,345 members</p>
+        <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-sm font-medium px-4 py-2 rounded-lg">Join</button>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex space-x-6 border-b border-gray-700 text-sm font-medium">
+        <button class="text-blue-500 border-b-2 border-blue-500 pb-2">Posts</button>
+        <button class="text-gray-400 pb-2">Members</button>
+        <button class="text-gray-400 pb-2">Resources</button>
+      </div>
+
+      <!-- Posts -->
+      <div class="space-y-4">
+        <!-- Post 1 -->
+        <div class="bg-[#111827] p-5 rounded-xl">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-full bg-gray-500"></div>
+            <div>
+              <p class="font-medium">Paloma Rincón</p>
+              <span class="text-xs text-gray-400">5h ago</span>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-200">Excited to see this group. I’m currently working on a React project and looking for feedback.</p>
+          <div class="bg-gray-800 rounded-lg mt-3 p-4">
+            <p class="text-gray-400 text-sm">Portnéser</p>
+            <p class="text-gray-300">Fragrant are</p>
+          </div>
+          <div class="flex items-center space-x-6 mt-4 text-sm text-gray-400">
+            <span>👍 8 likes</span>
+            <span>💬 2 comments</span>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="bg-[#111827] p-5 rounded-xl">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-full bg-gray-500"></div>
+            <div>
+              <p class="font-medium">Robert Vella</p>
+              <span class="text-xs text-gray-400">3h ago</span>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-200">Great to see more developers joining in! 🚀</p>
+          <div class="flex items-center space-x-6 mt-4 text-sm text-gray-400">
+            <span>👍 12 likes</span>
+            <span>💬 4 comments</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="space-y-6">
+      <!-- Community Details -->
+      <div class="bg-[#111827] p-5 rounded-xl">
+        <h2 class="font-semibold mb-3">Community Details</h2>
+        <p class="text-gray-400 text-sm">Rules</p>
+        <ul class="text-gray-300 text-sm list-decimal list-inside space-y-1 mt-2">
+          <li>Be respectful</li>
+          <li>No spam</li>
+        </ul>
+        <p class="text-gray-400 text-sm mt-4">Admins</p>
+        <div class="flex items-center space-x-2 mt-2">
+          <div class="w-8 h-8 rounded-full bg-gray-500"></div>
+          <span class="text-sm">Martha Craig</span>
+        </div>
+        <div class="flex items-center space-x-2 mt-2">
+          <div class="w-8 h-8 rounded-full bg-gray-500"></div>
+          <span class="text-sm">Robert Vella</span>
+        </div>
+      </div>
+
+      <!-- Suggested Communities -->
+      <div class="bg-[#111827] p-5 rounded-xl">
+        <h2 class="font-semibold mb-3">Suggested Communities</h2>
+        <div class="flex items-center justify-between bg-[#1f2937] px-3 py-2 rounded-lg mb-2">
+          <div class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20h9M12 4H3m9 16V4m0 0L5 9m7-5l7 5"/>
+            </svg>
+            <span>Computer Science</span>
+          </div>
+          <span class="text-xs text-gray-400">3,357 members</span>
+        </div>
+        <div class="flex items-center justify-between bg-[#1f2937] px-3 py-2 rounded-lg">
+          <div class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20h9M12 4H3m9 16V4m0 0L5 9m7-5l7 5"/>
+            </svg>
+            <span>Web Development</span>
+          </div>
+          <span class="text-xs text-gray-400">2,829 members</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+import {
+  Home,
+  Users,
+  User,
+  Mail,
+  Compass,
+  Settings,
+  Search,
+  Heart,
+  Bookmark,
+  Circle,
+} from "lucide-react";
+
+// keep NavItem above the main component
+function NavItem({ icon, text, active = false }) {
+  return (
+    <div
+      className={`flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer ${
+        active
+          ? "bg-gray-800 text-blue-500"
+          : "text-gray-400 hover:bg-gray-800 hover:text-white"
+      }`}
+    >
+      {icon}
+      <span className="text-sm font-medium">{text}</span>
+    </div>
+  );
+}
+
+export default function Dashboard() {
+  return (
+    <div className="flex h-screen bg-gray-900 text-white">
+      {/* Sidebar */}
+      <aside className="w-64 bg-black border-r border-gray-800 p-4 flex flex-col gap-6">
+        <div className="flex items-center gap-2 text-xl font-bold">
+          <span className="text-blue-500">UniSphere</span>
+        </div>
+
+        <nav className="flex flex-col gap-4">
+          <NavItem icon={<Home size={20} />} text="Home" active />
+          <NavItem icon={<Users size={20} />} text="Communities" />
+          <NavItem icon={<User size={20} />} text="Profile" />
+          <NavItem icon={<Mail size={20} />} text="Messages" />
+          <NavItem icon={<Compass size={20} />} text="Explore" />
+          <NavItem icon={<Settings size={20} />} text="Settings" />
+        </nav>
+      </aside>
+
+      {/* Main */}
+      <main className="flex-1 flex flex-col">
+        {/* Topbar */}
+        <header className="p-4 flex justify-between items-center border-b border-gray-800">
+          <div className="flex items-center bg-gray-800 px-3 py-2 rounded-lg w-1/2">
+            <Search size={18} className="text-gray-400" />
+            <input
+              type="text"
+              placeholder="Search"
+              className="bg-transparent outline-none ml-2 w-full text-sm"
+            />
+          </div>
+          <img
+            src="https://i.pravatar.cc/40"
+            alt="profile"
+            className="w-8 h-8 rounded-full"
+          />
+        </header>
+
+        {/* Content */}
+        <div className="flex flex-1 overflow-hidden">
+          {/* Feed */}
+          <div className="flex-1 p-6 flex flex-col gap-6 overflow-y-auto">
+            {/* Post with Image */}
+            <div className="bg-gray-800 rounded-xl p-4">
+              <div className="flex items-center gap-3 mb-3">
+                <img
+                  src="https://i.pravatar.cc/50?img=1"
+                  alt="Mark Johnson"
+                  className="w-10 h-10 rounded-full"
+                />
+                <div>
+                  <h4 className="font-semibold leading-tight">Mark Johnson</h4>
+                  <span className="text-gray-400 text-sm">2h</span>
+                </div>
+              </div>
+
+              <img
+                src="https://picsum.photos/800/340"
+                alt="mountain"
+                className="rounded-lg mb-3 w-full object-cover"
+              />
+
+              <div className="flex items-center gap-4 text-gray-400">
+                <button className="flex items-center gap-1 text-blue-400">
+                  <Heart size={18} aria-hidden />
+                  <span>34</span>
+                </button>
+                <Bookmark size={18} aria-hidden />
+              </div>
+            </div>
+
+            {/* Text Post */}
+            <div className="bg-gray-800 rounded-xl p-4">
+              <div className="flex items-center gap-3 mb-3">
+                <img
+                  src="https://i.pravatar.cc/50?img=2"
+                  alt="Jane Smith"
+                  className="w-10 h-10 rounded-full"
+                />
+                <div>
+                  <h4 className="font-semibold leading-tight">Jane Smith</h4>
+                  <span className="text-gray-400 text-sm">3h</span>
+                </div>
+              </div>
+              <p className="text-gray-300">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Sidebar */}
+          <aside className="w-72 border-l border-gray-800 p-6 flex flex-col gap-6 overflow-y-auto">
+            {/* Suggested communities */}
+            <div className="bg-gray-800 p-4 rounded-xl">
+              <h3 className="font-semibold mb-3">Suggested communities</h3>
+              <ul className="flex flex-col gap-3 text-sm">
+                {["Design", "Python", "Web Dev"].map((name) => (
+                  <li key={name} className="flex items-center gap-3 text-gray-300">
+                    <Circle size={16} className="text-gray-500" />
+                    <span className="font-medium">{name}</span>
+                  </li>
+                ))}
+              </ul>
+              <button className="mt-4 w-full bg-blue-600 hover:bg-blue-700 py-2 rounded-lg font-semibold">
+                Join
+              </button>
+            </div>
+
+            {/* Search list */}
+            <div className="bg-gray-800 p-4 rounded-xl">
+              <h3 className="font-semibold mb-3">Search</h3>
+              <ul className="flex flex-col gap-3 text-sm">
+                {["Dålister à", "TonE", "Ihenty"].map((name) => (
+                  <li key={name} className="flex items-center gap-3 text-gray-300">
+                    <Circle size={16} className="text-gray-500" />
+                    <span className="font-medium">{name}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+  );
+}
