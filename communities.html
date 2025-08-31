@@ -6,61 +6,62 @@
   <title>Communities Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#111214] text-white min-h-screen flex font-sans">
+<body class="bg-[#111214] text-white min-h-screen flex flex-col md:flex-row font-sans">
 
   <!-- Sidebar -->
-  <aside class="w-60 bg-[#0d0e10] p-6 flex flex-col space-y-6">
-    <nav class="space-y-4">
+  <aside class="w-full md:w-60 bg-[#0d0e10] p-4 md:p-6 flex flex-col space-y-6 fixed bottom-0 md:static md:h-auto z-10">
+    <nav class="flex md:flex-col justify-around md:space-y-4 space-x-6 md:space-x-0">
 
-     <div class="text-2xl font-bold mb-10 flex items-center space-x-2">
+      <!-- Logo (hidden on mobile) -->
+      <div class="hidden md:flex text-2xl font-bold mb-6 items-center space-x-2">
         <div class="w-6 h-6 bg-white rounded-full"></div>
         <span>UniSphere</span>
       </div>
-      
-      <!-- Home -->
-      <a href="Home.html" class="flex items-center space-x-3 text-gray-400 hover:text-white">
+
+      <!-- Nav Links -->
+      <a href="Home.html" class="flex items-center space-x-2 text-gray-400 hover:text-white">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 3l9 8h-3v10H6V11H3l9-8z"/>
         </svg>
-        <span>Home</span>
+        <span class="hidden md:inline">Home</span>
       </a>
-      <!-- Communities -->
-      <a href="communities.html" class="flex items-center space-x-3 text-blue-500">
+
+      <a href="communities.html" class="flex items-center space-x-2 text-blue-500">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 
           1.79-4 4 1.79 4 4 4zm0 2c-2.67 
           0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
         </svg>
-        <span>Communities</span>
+        <span class="hidden md:inline">Communities</span>
       </a>
-      <!-- Profile -->
-      <a href="Profile.html" class="flex items-center space-x-3 text-gray-400 hover:text-white">
+
+      <a href="Profile.html" class="flex items-center space-x-2 text-gray-400 hover:text-white">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 
           1.79-4 4 1.79 4 4 4zm0 2c-2.67 
           0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
         </svg>
-        <span>Profile</span>
+        <span class="hidden md:inline">Profile</span>
       </a>
-      <!-- Messages -->
-      <a href="Messages.html" class="flex items-center space-x-3 text-gray-400 hover:text-white">
+
+      <a href="Messages.html" class="flex items-center space-x-2 text-gray-400 hover:text-white">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M20 2H4a2 2 0 00-2 
           2v16l4-4h14a2 2 0 002-2V4a2 
           2 0 00-2-2z"/>
         </svg>
-        <span>Messages</span>
+        <span class="hidden md:inline">Messages</span>
       </a>
-      <!-- Explore (NEW) -->
-    <a href="Explore.html" class="flex items-center space-x-3 text-gray-400 hover:text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm3.9 6.1l-1.3 
-        3.8-3.8 1.3 1.3-3.8 3.8-1.3z"/>
-      </svg>
-      <span>Explore</span>
-    </a>
-      <!-- Settings -->
-      <a href="Settings.html" class="flex items-center space-x-3 text-gray-400 hover:text-white">
+
+      <a href="Explore.html" class="flex items-center space-x-2 text-gray-400 hover:text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm3.9 6.1l-1.3 
+          3.8-3.8 1.3 1.3-3.8 3.8-1.3z"/>
+        </svg>
+        <span class="hidden md:inline">Explore</span>
+      </a>
+
+      <a href="Settings.html" class="flex items-center space-x-2 text-gray-400 hover:text-white">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M19.14 12.936a7.952 
           7.952 0 000-1.872l2.036-1.58a.5.5 
@@ -84,25 +85,26 @@
           15.5a3.5 3.5 0 110-7 3.5 3.5 
           0 010 7z"/>
         </svg>
-        <span>Settings</span>
+        <span class="hidden md:inline">Settings</span>
       </a>
     </nav>
   </aside>
 
   <!-- Main Content -->
-  <main class="flex-1 p-8">
+  <main class="flex-1 p-4 md:p-8 mt-14 md:mt-0">
     <!-- Top bar -->
-    <div class="flex justify-between items-center mb-6">
-      <div class="w-full max-w-md">
+    <div class="flex justify-between items-center mb-6 flex-wrap gap-3">
+      <div class="w-full sm:w-auto flex-1">
         <input type="text" placeholder="Search" 
           class="w-full px-4 py-2 rounded-lg bg-[#1a1b1e] text-gray-300 focus:outline-none">
       </div>
-      <img src="https://i.pravatar.cc/40" alt="User" class="w-10 h-10 rounded-full ml-4">
+      <img src="https://i.pravatar.cc/40" alt="User" class="w-10 h-10 rounded-full">
     </div>
 
     <!-- Communities -->
-    <h1 class="text-2xl font-semibold mb-6">Communities</h1>
+    <h1 class="text-xl md:text-2xl font-semibold mb-6">Communities</h1>
     <div class="space-y-3">
+      <a href="Developer.html">
       <div class="flex items-center bg-[#1a1b1e] rounded-lg px-4 py-3 cursor-pointer hover:bg-[#252628]">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
           <path d="M3 17.25V21h3.75L17.81 
@@ -113,6 +115,7 @@
         </svg>
         <span class="ml-3">Student Developers</span>
       </div>
+      </a>
 
       <div class="flex items-center bg-[#1a1b1e] rounded-lg px-4 py-3 cursor-pointer hover:bg-[#252628]">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
