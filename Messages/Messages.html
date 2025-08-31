@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages - UniSphere</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <div class="flex h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-950 p-5 hidden md:flex flex-col">
+      <!-- Logo -->
+      <div class="text-2xl font-bold mb-10 flex items-center space-x-2">
+        <div class="w-6 h-6 bg-white rounded-full"></div>
+        <span>UniSphere</span>
+      </div>
+
+      <!-- Nav -->
+      <nav class="space-y-4">
+        <a href="#" class="flex items-center space-x-3 text-gray-300 hover:text-white">
+          <span class="material-icons">home</span>
+          <span>Home</span>
+        </a>
+        <a href="#" class="flex items-center space-x-3 text-gray-300 hover:text-white">
+          <span class="material-icons">groups</span>
+          <span>Communities</span>
+        </a>
+        <a href="#" class="flex items-center space-x-3 text-gray-300 hover:text-white">
+          <i class="material-icons">search</i>
+          <span>Explore</span>
+        </a> 
+        <a href="#" class="flex items-center space-x-3 text-gray-300 hover:text-white">
+          <span class="material-icons">person</span>
+          <span>Profile</span>
+        </a>
+        <a href="#" class="flex items-center space-x-3 text-blue-400">
+          <span class="material-icons">chat</span>
+          <span>Messages</span>
+        </a>
+        <a href="#" class="flex items-center space-x-3 text-gray-300 hover:text-white">
+          <span class="material-icons">settings</span>
+          <span>Settings</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 bg-gray-900 p-6 flex flex-col">
+      <!-- Header -->
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-2xl font-semibold">Messages</h1>
+        <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg">New message</button>
+      </div>
+
+      <!-- Search -->
+      <div class="mb-6">
+        <input type="text" placeholder="Search..." class="w-full bg-gray-800 text-gray-200 px-4 py-2 rounded-lg outline-none focus:ring-2 focus:ring-blue-600">
+      </div>
+
+      <!-- Messages List -->
+      <div class="flex flex-col space-y-4">
+        <!-- Item -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg hover:bg-gray-700">
+          <div class="flex items-center space-x-4">
+            <img src="https://i.pravatar.cc/100?img=1" alt="Kate" class="w-12 h-12 rounded-full">
+            <div>
+              <h2 class="font-semibold">Kate Lee</h2>
+              <p class="text-gray-400 text-sm">I hope you’re doing well.</p>
+            </div>
+          </div>
+          <span class="text-gray-400 text-sm">Yesterday</span>
+        </div>
+
+        <!-- Item -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg hover:bg-gray-700">
+          <div class="flex items-center space-x-4">
+            <img src="https://i.pravatar.cc/100?img=2" alt="Robert" class="w-12 h-12 rounded-full">
+            <div>
+              <h2 class="font-semibold">Robert Vella</h2>
+              <p class="text-gray-400 text-sm">Can we meet tomorrow?</p>
+            </div>
+          </div>
+          <span class="text-gray-400 text-sm">Yesterday</span>
+        </div>
+
+        <!-- Item -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg hover:bg-gray-700">
+          <div class="flex items-center space-x-4">
+            <img src="https://i.pravatar.cc/100?img=3" alt="Eve" class="w-12 h-12 rounded-full">
+            <div>
+              <h2 class="font-semibold">Eve H.</h2>
+              <p class="text-gray-400 text-sm">Sure, what time works for you?</p>
+            </div>
+          </div>
+          <span class="text-gray-400 text-sm">2 days ago</span>
+        </div>
+
+        <!-- Item -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg hover:bg-gray-700">
+          <div class="flex items-center space-x-4">
+            <img src="https://i.pravatar.cc/100?img=4" alt="Luisa" class="w-12 h-12 rounded-full">
+            <div>
+              <h2 class="font-semibold">Luisa Martins</h2>
+              <p class="text-gray-400 text-sm">I’ve sent you the document.</p>
+            </div>
+          </div>
+          <span class="text-gray-400 text-sm">2 days ago</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Mobile Bottom Navbar -->
+  <div class="fixed bottom-0 w-full bg-gray-950 p-3 flex justify-around md:hidden">
+    <a href="#" class="text-gray-300 hover:text-white">Home</a>
+    <a href="#" class="text-gray-300 hover:text-white">Communities</a>
+    <a href="#" class="text-blue-500 font-semibold">Messages</a>
+    <a href="#" class="text-gray-300 hover:text-white">Profile</a>
+  </div>
+
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</body>
+</html>
